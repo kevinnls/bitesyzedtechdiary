@@ -14,12 +14,15 @@ False == False in [False]
 ```
 
 Although I didn't get it at first, after a little bit of strenous staring
-I decided that it was `False`.
+I decided that it was `False`, or `True` I can no longer recall.
+
+The answer is `True` though. If you're confused
+(I'm looking at you, future me) pay attention to the order of precedence.
 
 ### Led to discord
 
 It was interesting, so I shared the tweet with a discord server of coding
-comrades. There, the Python specialist of the troupe posed my a challenge
+comrades. There, the Python specialist of the troupe posed a challenge
 of their own.
 
 ```python
@@ -74,5 +77,5 @@ as true in C. Almost everything except for `0` and `(null)` has evaluated
 to true. Although, when I say true, I just mean `if`'s body was executed
 since C doesn't have actual booleans.
 
-In experimenting to find this, I have no understood why
+In experimenting to find this, I have now understood why
 schools teach `scanf` instead of `argv`. Data types.
