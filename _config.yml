@@ -3,3 +3,13 @@ timezone: Europe/Paris
 
 twitter_username: kevinnlsamuel
 github_username: kevinnls
+
+host: 0.0.0.0
+
+defaults:
+  -
+    scope:
+      path: "index.md"
+    values:
+      layout: home
+
