@@ -1,0 +1,9 @@
+services:
+  bitesyzedtechdiary:
+    image: ghcr.io/github/pages-gem
+    volumes:
+      - ./:/src/site
+    ports:
+      - "127.0.0.1:4000:4000"
+volumes:
+  gems:
