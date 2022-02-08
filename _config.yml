@@ -1,23 +1,30 @@
 theme: minima
+minima:
+  skin: dark
+  social_links:
+    twitter: kevinnlsamuel
+    github: kevinnls
 timezone: Europe/Paris
 
-twitter_username: kevinnlsamuel
-github_username: kevinnls
-title: 'bitesyzedtechdiary'
+author:
+  name: kevinnls
+  email: developer@kevinnlsamuel.com
+
+title: "bitesyzedtechdiary"
 description: >-
   (hopefully) daily journal of tech discoveries, training and the sort
 
 host: 0.0.0.0
 
 defaults:
-  -
-    scope:
+  - scope:
       path: "index.md"
     values:
       layout: "home"
-  -
-    scope:
+  - scope:
       type: "posts"
     values:
       layout: "post"
 
+exclude:
+  - _posts/.git
