@@ -1,0 +1,4 @@
+[submodule "_posts"]
+	path = _posts
+	url = https://github.com/kevinnls/bitesyzedtechdiary.git
+	branch = posts
