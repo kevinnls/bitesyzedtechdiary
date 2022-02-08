@@ -11,5 +11,10 @@ defaults:
     scope:
       path: "index.md"
     values:
-      layout: home
+      layout: "home"
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
 
