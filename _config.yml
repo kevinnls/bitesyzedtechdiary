@@ -14,7 +14,6 @@ title: "bitesyzedtechdiary"
 description: >-
   (hopefully) daily journal of tech discoveries, training and the sort
 
-baseurl: "/bitesyzedtechdiary"
 host: 0.0.0.0
 
 defaults:
@@ -26,3 +25,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+exclude:
+  - _posts/.git
