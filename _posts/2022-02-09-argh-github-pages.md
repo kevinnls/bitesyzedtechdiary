@@ -8,7 +8,7 @@ broken links. The links worked perfectly in my local setup, even after
 setting `baseurl` and testing things.
 But lovely GitHub Pages kept breaking it.
 
-Perhaps it's just that GitHub Pages isn't handling `{%post_url ...%}` as
+Perhaps it's just that GitHub Pages isn't handling `{%raw}{%post_url ...%}{%endraw%}` as
 it should? BUT IT SHOULDN'T HAVE TO HANDLE ANYTHING! It's already baked
 into Jekyll. ARGH, GITHUB PAGESSS!
 
