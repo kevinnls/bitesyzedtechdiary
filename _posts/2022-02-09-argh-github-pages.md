@@ -33,7 +33,7 @@ good reading experience.
 in [VSCode](https://code.visualstudio.com/) right before bed, and think
 about how I need to commit and push, and enter passphrases for both...
 
-> I need a neater CMS
+> I need a neater CMS solution
 
 I remember [Netlify](https://www.netlify.com/) came with
 [NetlifyCMS](https://www.netlifycms.org/). I had used that for my **other**
@@ -44,6 +44,8 @@ content platforms. I have no idea what they are, I remember
 [Fireship once made a video on YouTube](https://youtu.be/c_8cplBi_gE)
 and that I started watching and fell asleep, registering none of it.
 
+### Yak shaving
+
 But undoubtedly I am beginning to **shave my yak**, a term I learnt today
 [from Twitter](https://twitter.com/synecdotal/status/1491248199109332992?s=20&t=htMoqIhRY1x7EQGq1_Q3EQ)
 and by
@@ -52,7 +54,7 @@ and by
 [a rabbit hole.](https://medium.com/@firehoseproject/a-guide-to-yak-shaving-your-code-d30f98dc759)
 or should I say, shaving my yak?
 
-Each of those groups of workds is a separate link, but I doubt it's going
+Each of those groups of words is a separate link, but I doubt it's going
 to be rendered in any way to indicate so.
 
 I suppose I know what the yak I will shave tomorrow.
