@@ -6,5 +6,10 @@ services:
       - gems:/usr/local/bundle
     ports:
       - "${docker_port:-4000}:4000"
+    command: >
+      jekyll serve
+      --host 0.0.0.0
+      --port 4000
+      --baseurl '/'
 volumes:
   gems:
