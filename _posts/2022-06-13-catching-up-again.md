@@ -1,8 +1,6 @@
 ---
 description: I try once again to keep up the supposedly daily journal
-
-# um i have no idea how to get baseurl working here lol
-image: /bitesyzedtechdiary/assets/post-img/2022/06/13-000-catchingup.webp
+image: /assets/post-img/2022/06/13-000-catchingup.webp
 images:
   000: "/assets/post-img/2022/06/13-000-catchingup.svg"
 ---
