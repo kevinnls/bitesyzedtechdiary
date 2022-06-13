@@ -1,4 +1,10 @@
 ---
+description: trying once again to keep up the supposedly daily journal
+
+# um i have no idea how to get baseurl working here lol
+image: /bitesyzedtechdiary/assets/post-img/2022/06/13-000-catchingup.svg
+images:
+  000: "/assets/post-img/2022/06/13-000-catchingup.svg"
 ---
 
 [Nextcloud]: https://nextcloud.com
@@ -7,6 +13,8 @@
 [http203]: https://youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
 
 ## Wow that was a long break...
+
+![]( {{ page.images[0] | relative_url }} )
 
 It's been such a long break that I don't even remember my
 own stylistic rules. Should I be capitalising? Do I use
