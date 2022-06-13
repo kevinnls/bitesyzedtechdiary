@@ -1,5 +1,5 @@
 ---
-description: I try once again to keep up the supposedly daily journal
+description: I try once more to keep up the supposedly daily journal
 image: /assets/post-img/2022/06/13-000-catchingup.webp
 images:
   000: "/assets/post-img/2022/06/13-000-catchingup.svg"
