@@ -1,6 +1,11 @@
 ---
 description: I try once more to keep up the supposedly daily journal
-image: /assets/post-img/2022/06/13-000-catchingup.webp
+image:
+  path: /assets/post-img/2022/06/13-000-catchingup.webp
+  alt: >
+    calendar of march with a big june
+    superimposed to indicating the jump
+    since the date of most recent post
 images:
   000: "/assets/post-img/2022/06/13-000-catchingup.svg"
 ---
@@ -12,7 +17,7 @@ images:
 
 ## Wow that was a long break...
 
-![]( {{ page.images[0] | relative_url }} )
+![calendar of march with a big june superimposed indicating the jump since the date of most recent post]( {{ page.images[0] | relative_url }} )
 
 It's been such a long break that I don't even remember my
 own stylistic rules. Should I be capitalising? Do I use
