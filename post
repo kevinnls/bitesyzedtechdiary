@@ -1,6 +1,6 @@
 #!/bin/sh
 
-[ -n ${DEBUG} ] && set -x
+[ -n "${DEBUG}" ] && set -x
 
 _postpattern="_posts/$(date +'%Y-%m-%d-*.md')"
 
@@ -13,4 +13,4 @@ if [ -z "${post}" ]; then
     post="${post/\*/${slug}}"
 fi
 
-${EDITOR:-vi} ${post}
+"${EDITOR:-vi}" "${post}"
