@@ -1,0 +1,14 @@
+#!/bin/sh
+
+[ -n ${DEBUG} ] && set -x
+
+if [ -z "${post}" ]; then
+   post="_posts/$(date +'%d-%m-%Y-*.md')"
+fi
+
+if ! { find -wholename "${post}" >/dev/null ; }; then
+    read -p "NAME/SLUG REQUIRED: " slug
+    post="${post/\*/${slug}}"
+fi
+
+${EDITOR:-vi} ${post}
