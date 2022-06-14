@@ -3,7 +3,7 @@
 [ -n ${DEBUG} ] && set -x
 
 if [ -z "${post}" ]; then
-   post="_posts/$(date +'%d-%m-%Y-*.md')"
+   post="_posts/$(date +'%Y-%m-%d-*.md')"
 fi
 
 if ! { find -wholename "${post}" >/dev/null ; }; then
