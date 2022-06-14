@@ -32,3 +32,7 @@ plugins:
   - jekyll-feed
   - jemoji
 
+exclude:
+  - docker-compose*.yml
+  - Dockerfile*
+  - post
