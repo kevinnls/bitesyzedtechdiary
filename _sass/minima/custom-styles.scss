@@ -9,3 +9,11 @@ kbd {
     font-family: monospace;
     white-space: no-wrap;
 }
+
+p:has(> img:not(.emoji)) {
+    text-align: center;
+}
+
+.twitter-tweet {
+    margin: auto;
+}
