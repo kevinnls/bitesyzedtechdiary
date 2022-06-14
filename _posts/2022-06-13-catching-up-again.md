@@ -10,6 +10,8 @@ images:
   000: "/assets/post-img/2022/06/13-000-catchingup.svg"
 ---
 
+> {{ page.description }}
+
 [Nextcloud]: https://nextcloud.com
 [com.opensource-intro-dns]: https://opensource.com/article/17/4/introduction-domain-name-system-dns
 [com.opensource-build-dns]: https://opensource.com/article/17/4/build-your-own-name-server
