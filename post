@@ -2,11 +2,13 @@
 
 [ -n ${DEBUG} ] && set -x
 
+_postpattern="_posts/$(date +'%Y-%m-%d-*.md')"
+
 if [ -z "${post}" ]; then
-   post="_posts/$(date +'%Y-%m-%d-*.md')"
+    post=$(find _posts/ -name "${_postpattern##*/}")
 fi
 
-if ! { find -wholename "${post}" >/dev/null ; }; then
+if [ -z "${post}" ]; then
     read -p "NAME/SLUG REQUIRED: " slug
     post="${post/\*/${slug}}"
 fi
