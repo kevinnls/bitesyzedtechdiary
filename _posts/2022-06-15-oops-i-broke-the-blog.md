@@ -1,9 +1,7 @@
 ---
 description: Blog Breaking Build
-images:
-  000: '/assets/post-img/2022/06/15-000-broken.png'
 image:
-  path: '/assets/post-img/2022/06/15-000-broke.png'
+  path: '/assets/post-img/2022/06/15-000-broken.png'
   alt: screencap showing blog without styling. just plain ol' html. but still accessible! wink wink
 ---
 
@@ -13,7 +11,7 @@ image:
 
 <img
 alt="{{image.alt}}"
-src="{{- page.images[0] | relative_url -}}"
+src="{{- page.image | relative_url -}}"
 style="width:100%;height:clamp(315px,465vw,450px);object-fit:scale-down" >
 
 ## Exclusion causes confusion
