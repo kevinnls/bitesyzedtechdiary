@@ -1,6 +1,6 @@
 ---
 image:
-  path: https://en.wikipedia.org/wiki/Wiki_rabbit_hole#/media/File:Wikipedia_Rabbit_Hole.jpg
+  path: https://upload.wikimedia.org/wikipedia/commons/f/fd/Wikipedia_Rabbit_Hole.jpg
   alt: >
     illustrative graphic of wiki rabbit hole that loops
     over various monuments, phenomena and objects indicating
