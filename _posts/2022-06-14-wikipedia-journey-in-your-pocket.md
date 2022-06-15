@@ -11,6 +11,17 @@ description: I go down a rabbit hole starting at Twitter and ending at Wikipedia
 
 > {{ page.description }}
 
+<figure>
+    <img alt="{{page.image.alt}}"
+	src="{{page.image.path}}"
+	style="margin:auto;width:100%;height:clamp(115px,465vw,350px);object-fit:cover;" >
+    <figcaption style="text-align:center;">
+	<small>Glenn Newcomer,
+	    <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via
+	    <a href="https://commons.wikimedia.org/wiki/File:Wikipedia_Rabbit_Hole.jpg">Wikimedia Commons</a></small>
+    </figcaption>
+</figure>
+
 ## It always seems to start on Twitter
 
 I suppose that is an indication of the amount of time
@@ -178,3 +189,4 @@ Oh Twitter embeds was a whole different matter however. Those are not images.
 I tried adding inline styles to the embed, but it did not work. I think
 the twitter script works by replacing the element on the DOM. My presumption
 is backed by the fact that it works fine when I add it to external styles.
+
