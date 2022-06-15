@@ -10,7 +10,7 @@ fi
 
 if [ -z "${post}" ]; then
     read -p "NAME/SLUG REQUIRED: " slug
-    post="${post/\*/${slug}}"
+    post="${_postpattern/\*/${slug}}"
 fi
 
 "${EDITOR:-vi}" "${post}"
