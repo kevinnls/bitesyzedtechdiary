@@ -35,4 +35,4 @@ plugins:
 exclude:
   - docker-compose*.yml
   - Dockerfile*
-  - /post
+    # - post
