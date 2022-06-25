@@ -10,16 +10,12 @@ images:
   000: "/assets/post-img/2022/06/13-000-catchingup.svg"
 ---
 
-> {{ page.description }}
-
 [Nextcloud]: https://nextcloud.com
 [com.opensource-intro-dns]: https://opensource.com/article/17/4/introduction-domain-name-system-dns
 [com.opensource-build-dns]: https://opensource.com/article/17/4/build-your-own-name-server
 [http203]: https://youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
 
 ## Wow that was a long break...
-
-![calendar of march with a big june superimposed indicating the jump since the date of most recent post]( {{ page.images[0] | relative_url }} )
 
 It's been such a long break that I don't even remember my
 own stylistic rules. Should I be capitalising? Do I use
@@ -103,7 +99,7 @@ The Navigation API that Jake Archibald
 ([twitter.com/jaffathecake](https://twitter.com/jaffathecake))
 has been speaking of a lot recently.
 
-<iframe width="560" height="315"
+<iframe width="auto" height="315"
 title="YouTube video player" frameborder="0"
 src="https://www.youtube-nocookie.com/embed/cgKUMRPAliw"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

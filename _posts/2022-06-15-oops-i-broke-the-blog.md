@@ -1,18 +1,12 @@
 ---
 description: Blog Breaking Build
 image:
-  path: '/assets/post-img/2022/06/15-000-broken.png'
-  alt: screencap showing blog without styling. just plain ol' html. but still accessible! wink wink
+  path: /assets/post-img/2022/06/15-000-broken.png
+  alt: "screencap showing blog without styling. just plain ol' html. but still accessible! wink wink"
+  style: "object-fit: scale-down;"
 ---
 
 [yesterday]: {%- post_url 2022-06-14-wikipedia-journey-in-your-pocket -%}#added-a-helper-script-to-edit-todays-post
-
-> {{ page.description }}
-
-<img
-alt="{{image.alt}}"
-src="{{- page.image | relative_url -}}"
-style="width:100%;height:clamp(315px,465vw,450px);object-fit:scale-down" >
 
 ## Exclusion causes confusion
 
