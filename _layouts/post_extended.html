@@ -13,6 +13,9 @@ layout: post
     <img
 	alt="{{- page.image.alt | default: "posts cover image" -}}"
 	src="{{- page.image.path | default: page.image | relative_url -}}"
+	{%- if page.image.style -%}
+	    style="{{- page.image.style -}}"
+        {%-endif-%}
 	class="cover-image">
     {%- if page.image.caption or page.image.credit -%}
 	<figcaption class="cover-image">
