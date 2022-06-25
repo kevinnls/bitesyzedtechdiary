@@ -1,0 +1,25 @@
+---
+layout: post
+---
+
+{%- if page.description -%}
+    <blockquote class="tagline">
+	{{ page.description }}
+    </blockquote>
+{%- endif -%}
+
+{%- if page.image -%}
+    <figure class="cover-image">
+    <img
+	alt="{{- page.image.alt | default: "posts cover image" -}}"
+	src="{{- page.image.path | default: page.image | relative_url -}}"
+	class="cover-image">
+    {%- if page.image.caption or page.image.credit -%}
+	<figcaption class="cover-image">
+	    {{- page.image.caption | default: page.image.credit  | markdownify -}}
+	</figcaption>
+    {%- endif -%}
+    </figure>
+{%- endif -%}
+
+{{ content }}

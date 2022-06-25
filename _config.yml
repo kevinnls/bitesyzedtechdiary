@@ -25,7 +25,7 @@ defaults:
   - scope:
       type: "posts"
     values:
-      layout: "post"
+      layout: "post_extended"
 
 plugins:
   - jekyll-remote-theme

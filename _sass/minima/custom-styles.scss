@@ -17,3 +17,24 @@ p:has(> img:not(.emoji)) {
 .twitter-tweet {
     margin: auto;
 }
+
+blockquote.tagline {
+    font-style: normal;
+}
+
+figure.cover-image {
+    margin: 5px 0px;
+}
+img.cover-image {
+    width: 100%;
+    object-fit: scale-down;
+    @media screen and (min-width: 450px) {
+	height: clamp(315px,465vw,450px);
+	object-fit: cover;
+    }
+}
+figcaption.cover-image {
+    text-align: center;
+    font-size: 0.8em;
+}
+
