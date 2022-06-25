@@ -1,6 +1,6 @@
 services:
   bitesyzedtechdiary:
-    image: ghcr.io/github/pages-gem
+    image: ghcr.io/kevinnls/pages-gem:latest-alpine
     environment:
       TZ: ${TZ:-}
     volumes:
