@@ -5,7 +5,6 @@ images:
   - '/assets/post-img/2022/07/18-000-breadcrumbs_to_section.png'
 ---
 
-<base target="_blank">
 <script>
     document.title = 'The <base> tag in HTML'
     document.querySelector('article h1.post-title.p-name').innerHTML = 'The <code>&lt;base&gt;</code> tag in HTML'
