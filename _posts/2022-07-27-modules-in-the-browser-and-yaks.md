@@ -90,7 +90,7 @@ I even added animation! TADA!
 <figcaption>The spinner I manually drew and animated using SVG</figcaption>
 </figure>
 
-The inpsiration was a recent episode of HTTP203 titled [_"Demystifying SVG Paths"_](https://youtu.be/9qen5CKjUe8)
+The inspiration was a recent episode of HTTP203 titled [_"Demystifying SVG Paths"_](https://youtu.be/9qen5CKjUe8)
 
 <blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">the episode worked! i wrote some SVG manually! 🐢<br>then i forced the user to see it because i wanted to show off</p>&mdash; Kevin Samuel (@kevinnlsamuel) <a href="https://twitter.com/kevinnlsamuel/status/1551932848763985921?ref_src=twsrc%5Etfw">July 26, 2022</a></blockquote>
 
