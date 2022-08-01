@@ -26,3 +26,9 @@ layout: post
 {%- endif -%}
 
 {{ content }}
+
+{%-if site.caveat_banner-%}
+<script type="module">
+const message=`{{-site.caveat_banner-}}`;let localMessage=localStorage.getItem('caveatMessage')||'';let count=localStorage.getItem('caveatDismissCount')||0;if(localMessage!==message){localStorage.setItem('caveatMessage',message);count=0;localStorage.setItem('caveatDismissCount',count)}if(count<1){console.warn("caveatnotshownenough.showingagain");const caveatBanner=document.createElement('div');caveatBanner.appendChild(document.createElement('span'));caveatBanner.appendChild(document.createElement('button'));caveatBanner.children[0].textContent=message;caveatBanner.children[1].textContent='X';caveatBanner.children[1].addEventListener('click',()=>{caveatBanner.remove();localStorage.setItem('caveatDismissCount',++count)});caveatBanner.style=`place-items:center;display:grid;grid-template-columns:9fr 1fr;z-index:3;position:absolute;top:0%;padding:3px 2ch;font-size:.9rem;background-color:rgb(200,0,0);width:100%;box-sizing:border-box;`;caveatBanner.children[1].style=`background:none;border:none;font-weight:900;`;document.body.prepend(caveatBanner);}
+</script>
+{%-endif-%}

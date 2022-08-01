@@ -1,4 +1,9 @@
 remote_theme: jekyll/minima
+caveat_banner: >
+  Dear Recruiter,
+  This blog is unedited and not indicative
+  of how I write professionally. I thank you
+  for your understanding.
 minima:
   skin: dark
   social_links:
