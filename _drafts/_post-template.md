@@ -1,7 +1,7 @@
 ---
 description:
-image:
-  path:
-  alt:
+# image:
+  # path:
+  # alt:
 ---
 
