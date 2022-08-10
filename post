@@ -43,7 +43,7 @@ fi
 if [ -z "${post}" ]; then
     >&2 echo creating post for ${_date}
     >&2 read -p "NAME/SLUG REQUIRED: " slug
-    post="${_postpattern%%\**}${slug}${_postpattern##*\*}"
+    post="${_postpattern%%\**}${slug// /-}${_postpattern##*\*}"
     cp -u _drafts/_post-template.md "${post}"
 fi
 
