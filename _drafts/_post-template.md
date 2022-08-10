@@ -1,0 +1,7 @@
+---
+description:
+image:
+  path:
+  alt:
+---
+
