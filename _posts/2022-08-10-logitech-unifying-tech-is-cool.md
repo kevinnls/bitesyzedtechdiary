@@ -3,7 +3,7 @@ title: Logitech Unifying Tech is Cool
 
 description: >
     I finally write the thing I wanted to write a week ago
-    about the thing I tried a week ago
+    about the thing from 13 years ago that I tried a week ago
 #image:
   #path:
   #alt:
