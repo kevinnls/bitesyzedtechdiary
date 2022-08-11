@@ -101,7 +101,7 @@ before 2022 (2009 and 2013) on the topic of unifying receiver]({{ page.images[0]
 
 That is so cool!
 
-### Connecting via the Unifyging Receiver
+### Connecting via the Unifying Receiver
 
 Turns out the special software is needed only to make the connection.
 The pairing process so to speak. And this time the pairing information
