@@ -20,6 +20,7 @@ description: >-
   (hopefully) daily journal of tech discoveries, training and the sort
 baseurl: "/bitesyzedtechdiary"
 
+incremental: true
 host: 0.0.0.0
 
 defaults:

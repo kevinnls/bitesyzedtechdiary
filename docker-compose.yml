@@ -3,6 +3,7 @@ services:
     image: ghcr.io/kevinnls/pages-gem:latest-alpine
     environment:
       TZ: "${TZ:-}"
+      JEKYLL_LOG_LEVEL: debug
     volumes:
       - ./:/src/site
     ports:
