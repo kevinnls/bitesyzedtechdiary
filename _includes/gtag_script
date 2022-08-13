@@ -1,0 +1,4 @@
+<script type="module">
+import '{{ "/assets/script/googletag.js" | relative_url }}';window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);};gtag('js', new Date());gtag('config', 'G-Q919C9FL13');
+</script>
+

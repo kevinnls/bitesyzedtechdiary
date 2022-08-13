@@ -1,3 +1,4 @@
+enable_analytics: true
 remote_theme: jekyll/minima
 caveat_banner: >
   Dear Recruiter,
