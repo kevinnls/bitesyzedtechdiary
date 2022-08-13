@@ -1,6 +1,6 @@
 ---
 ---
 
-{%-if site.enable_analytics and jekyll.environemt == 'production'-%}
+{%-if site.enable_analytics-%}
 {%-include gtag_script-%}
 {%-endif-%}
