@@ -29,7 +29,7 @@ while [ ${#} -gt 0 ]; do
 			;;
 		*)
 			_date=$(convert_date_string "${1}")
-		;;
+			;;
 	esac
 	shift 1
 done
@@ -38,7 +38,7 @@ _date="${_date:-$(convert_date_string now)}"
 _postpattern="${_date}-*.md"
 
 if [ -z "${post}" ]; then
-    post=$(find _drafts/ -name "${_postpattern##*/}")
+	post=$(find _drafts/ -name "${_postpattern##*/}")
 fi
 
 if [ -z "${post}" ]; then
@@ -46,10 +46,10 @@ if [ -z "${post}" ]; then
 fi
 
 if [ -z "${post}" ]; then
-    >&2 echo creating post for ${_date}
-    >&2 read -p "NAME/SLUG REQUIRED: " slug
-    post="${_postpattern%%\**}${slug// /-}${_postpattern##*\*}"
-    cp -u _drafts/_post-template.md "${post}"
+	>&2 echo creating post for ${_date}
+	>&2 read -p "NAME/SLUG REQUIRED: " slug
+	post="${_postpattern%%\**}${slug// /-}${_postpattern##*\*}"
+	cp -u _drafts/_post-template.md "${post}"
 fi
 
 case ${action:-name} in
