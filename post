@@ -32,7 +32,7 @@ _postpattern="${_date}-*.md"
 
 for _dir in '_drafts/' '_posts/'; do
 	if [ -z "${post_name}" ]; then
-		post_name=$(find "${_dir}" -name "${_postpattern}" -printf %P)
+		post_name=$(find "${_dir}" -name "${_postpattern}" -printf '%P')
 		post_dir="${post_name:+${_dir}}"
 	fi
 done
@@ -49,9 +49,9 @@ if [ -z "${post_name}" ]; then
 	cp -u _drafts/_post-template.md "${post_dir}${post_name}"
 fi
 
-case ${action:-name} in
+case "${action:-name}" in
 	name)
-		printf '%s\n' "${post_dir}${post_name}"
+		echo "${post_dir}${post_name}"
 		;;
 	edit)
 		"${EDITOR:-vi}" "${post_dir}${post_name}"
