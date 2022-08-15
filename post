@@ -38,14 +38,14 @@ for _dir in '_drafts/' '_posts/'; do
 done
 
 if [ -z "${post_name}" ]; then
-	>&2 echo creating post for ${_date}
-	>&2 read -p "NAME/SLUG REQUIRED: " slug
+	>&2 printf 'creating post for %s\nNAME/SLUG REQUIRED: ' "${_date}"
+	read slug
 
 	post_name="${_postpattern%%\**}${slug// /-}${_postpattern##*\*}"
 	### hey. i know you forgot.
 	# - %%\** - delete everything after \*
 	# - ##*\* - delete everything before \*
-
+	post_dir='_drafts/'
 	cp -u _drafts/_post-template.md "${post_dir}${post_name}"
 fi
 
@@ -71,7 +71,7 @@ case "${action:-name}" in
 		fi
 		;;
 	*)
-		>&2 echo <<- EOM
+		>&2 cat <<- EOM
 		CONGRATS!
 
 		you managed to trigger an exception
