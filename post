@@ -37,15 +37,12 @@ done
 _date="${_date:-$(convert_date_string now)}"
 _postpattern="${_date}-*.md"
 
-if [ -z "${post_name}" ]; then
-	post_name=$(find _drafts/ -name "${_postpattern}" -printf %P)
-	post_dir='_drafts/'
-fi
-
-if [ -z "${post_name}" ]; then
-	post_name=$(find _posts/ -name "${_postpattern}" -printf %P);
-	post_dir='_posts/'
-fi
+for _dir in '_drafts/' '_posts/'; do
+	if [ -z "${post_name}" ]; then
+		post_name=$(find "${_dir}" -name "${_postpattern}" -printf %P)
+		post_dir="${_dir}"
+	fi
+done
 
 if [ -z "${post_name}" ]; then
 	>&2 echo creating post for ${_date}
