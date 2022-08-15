@@ -33,7 +33,7 @@ _postpattern="${_date}-*.md"
 for _dir in '_drafts/' '_posts/'; do
 	if [ -z "${post_name}" ]; then
 		post_name=$(find "${_dir}" -name "${_postpattern}" -printf %P)
-		post_dir="${_dir}"
+		post_dir="${post_name:+${_dir}}"
 	fi
 done
 
