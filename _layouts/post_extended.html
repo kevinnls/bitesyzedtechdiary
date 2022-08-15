@@ -33,6 +33,6 @@ const message=`{{-site.caveat_banner-}}`;let localMessage=localStorage.getItem('
 </script>
 {%-endif-%}
 
-{%-if site.enable_analytics-%}
+{%-if site.enable_analytics and jekyll.environemt == 'production'-%}
 {%-include gtag_script-%}
 {%-endif-%}
