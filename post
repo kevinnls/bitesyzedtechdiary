@@ -37,33 +37,48 @@ done
 _date="${_date:-$(convert_date_string now)}"
 _postpattern="${_date}-*.md"
 
-if [ -z "${post}" ]; then
-	post=$(find _drafts/ -name "${_postpattern##*/}")
+if [ -z "${post_name}" ]; then
+	post_name=$(find _drafts/ -name "${_postpattern}" -printf %P)
+	post_dir='_drafts/'
 fi
 
-if [ -z "${post}" ]; then
-	post=$(find _posts/ -name "${_postpattern##*/}");
+if [ -z "${post_name}" ]; then
+	post_name=$(find _posts/ -name "${_postpattern}" -printf %P);
+	post_dir='_posts/'
 fi
 
-if [ -z "${post}" ]; then
+if [ -z "${post_name}" ]; then
 	>&2 echo creating post for ${_date}
 	>&2 read -p "NAME/SLUG REQUIRED: " slug
-	post="${_postpattern%%\**}${slug// /-}${_postpattern##*\*}"
-	cp -u _drafts/_post-template.md "${post}"
+
+	post_name="${_postpattern%%\**}${slug// /-}${_postpattern##*\*}"
+	### hey. i know you forgot.
+	# - %%\** - delete everything after \*
+	# - ##*\* - delete everything before \*
+
+	cp -u _drafts/_post-template.md "${post_dir}${post_name}"
 fi
 
 case ${action:-name} in
 	name)
-		printf '%s\n' "${post}"
+		printf '%s\n' "${post_dir}${post_name}"
 		;;
 	edit)
-		"${EDITOR:-vi}" "${post}"
+		"${EDITOR:-vi}" "${post_dir}${post_name}"
 		;;
 	publish)
-		mv "_drafts/${post##*/}" "_posts/${post##*/}"
+		if [ "${post_dir}" != '_posts/' ]; then
+			mv "_drafts/${post_name}" "_posts/${post_name}"
+		else
+			echo "${post_name} is already in _posts"
+		fi
 		;;
 	unpublish)
-		mv "_posts/${post##*/}" "_drafts/${post##*/}"
+		if [ "${post_dir}" != "_drafts/" ]; then
+			mv "_posts/${post_name}" "_drafts/${post_name}"
+		else
+			echo "${post_name} has not been published yet"
+		fi
 		;;
 	*)
 		>&2 echo <<- EOM
