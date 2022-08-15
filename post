@@ -6,6 +6,8 @@ set -e
 
 ACTION_edit=0
 ACTION_name=1 #default action
+ACTION_publish=0
+ACTION_unpublish=0
 
 convert_date_string(){ if { date '+%F' --date="${1}" 2>/dev/null;};then return 0;else >&2 echo 'invalid date string provided'; return 1;fi; }
 
@@ -14,10 +16,26 @@ while [ ${#} -gt 0 ]; do
 		--edit|-e)
 			ACTION_edit=1
 			ACTION_name=0
+			ACTION_publish=0
+			ACTION_unpublish=0
 			;;
 		--name|-n)
 			ACTION_name=1
 			ACTION_edit=0
+			ACTION_publish=0
+			ACTION_unpublish=0
+			;;
+		--publish|-p)
+			ACTION_publish=1
+			ACTION_name=0
+			ACTION_edit=0
+			ACTION_unpublish=0
+			;;
+		--unpublish|-u)
+			ACTION_unpublish=1
+			ACTION_name=0
+			ACTION_edit=0
+			ACTION_publish=0
 			;;
 		--date|-d)
 			_date=$(convert_date_string "${2}")
@@ -34,10 +52,14 @@ while [ ${#} -gt 0 ]; do
 done
 
 _date="${_date:-$(convert_date_string now)}"
-_postpattern="_posts/${_date}-*.md"
+_postpattern="${_date}-*.md"
 
 if [ -z "${post}" ]; then
-    post=$(find _posts/ -name "${_postpattern##*/}")
+    post=$(find _drafts/ -name "${_postpattern##*/}")
+fi
+
+if [ -z "${post}" ]; then
+	post=$(find _posts/ -name "${_postpattern##*/}");
 fi
 
 if [ -z "${post}" ]; then
@@ -49,3 +71,5 @@ fi
 
 if [ "${ACTION_edit}" -eq 1 ]; then "${EDITOR:-vi}" "${post}"; fi
 if [ "${ACTION_name}" -eq 1 ]; then printf '%s\n' "${post}"; fi
+if [ "${ACTION_publish}" -eq 1 ]; then mv "_drafts/${post##*/}" "_posts/${post##*/}"; fi
+if [ "${ACTION_unpublish}" -eq 1 ]; then mv "_posts/${post##*/}" "_drafts/${post##*/}"; fi
