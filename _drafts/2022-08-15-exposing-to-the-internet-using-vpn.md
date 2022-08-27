@@ -7,7 +7,6 @@ title: Exposing to the Internet using VPN
   # path:
   # alt:
 ---
-
 Given all the false advertising around virtual private networks
 (VPNs), it sounds counter-intuitive that the same thing would
 be used to "expose" something to the internet.
@@ -15,6 +14,8 @@ be used to "expose" something to the internet.
 But not all VPN advertising is fake, and some aspects of it
 are rather useful&mdash;in ways that are not portrayed by
 common VPN providers.
+
+[Skip the ranting tangent](#using-vpn-to-expose-the-home-network) (Not recommended)
 
 ### What is a VPN?
 
@@ -169,6 +170,40 @@ sudo apt install wireguard-tools
 It wasn't too bad with Raspbian, eh? Good thing it's based on
 Debian 11. I won't be complaining for a while.
 
-#### Configuring
+#### Education
 
-Was basically 
+Then I went to read the documentation. Okay, I did read some
+beforehand too. I read the quickstart guides off the official
+website.
+
+I understood a little. Then I read the man pages. And I stopped
+trying to understand and just started smashing buttons.
+
+Also it has been a week since I started writing this post and
+I don't remember what I did.
+
+#### Configuration
+
+I started by using `wg set` but soon realised it wasn't easy.
+I somehow figured out `wg-quick`. Finally found the systemd
+service `wg-quick@.service`. So now I had an
+`/etc/wireguard/wg0.conf` file to manage my configuration.
+
+Eventually got it setup on two devices. Using the systemd
+service. But what I didn't know was that the service had
+a `reload` command. I could have used
+`systemctl reload wg-quick@wg0`. But I realised it only
+much later.
+
+I used a very complicated `wg syncconf <(wg-quick strip wg0)`
+that seemed to fail at times
+
+The configuration file itself was simple enough
+```ini
+[Interface]
+Address = 192.168.2.2/31
+PrivateKey = RandomKeyThatIsWeirdlyShort
+
+[Peer]
+PublicKey = AnotherKeyButPublicStyle
+```
