@@ -1,10 +1,5 @@
 enable_analytics: true
 remote_theme: jekyll/minima@32468f51758b0b37c2b1f423265d4f29db461b27
-caveat_banner: >
-  Dear Recruiter,
-  This blog is unedited and not indicative
-  of how I write professionally. I thank you
-  for your understanding.
 minima:
   skin: dark
   social_links:
