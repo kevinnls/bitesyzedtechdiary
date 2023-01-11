@@ -8,8 +8,8 @@ caveat_banner: >
 minima:
   skin: dark
   social_links:
-    twitter: kevinnlsamuel
-    github: kevinnls
+    - { platform: github,  user_url: "https://github.com/kevinnls" }
+    - { platform: twitter, user_url: "https://twitter.com/kevinnlsamuel" }
 
 author:
   name: Kevin Samuel
