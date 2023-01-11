@@ -320,3 +320,23 @@ uncomplicated</abbr>.
 
 It has been a month and half since I started writing this post by the way. I am just going to
 get this over with as soon as possible.
+
+# Future me intervenes
+
+Today is 11 January, 2023. It has been more than four months since I started this piece.
+
+I do not even remember the exact details. I got my Wireguard VPN working. And while I
+did not have many uses for it at first, it has now become one of the most important (to me)
+internet services I manage.
+
+I use it to provide my [Nextcloud](https://nextcloud.com/) with an external storage backend via
+SSH over Wireguard to my home server. So I can move off old large files that I need access to,
+but don't need to store on my rented
+<abbr title="virtual private server; a virtual machine rented from some provider">VPS</abbr>.
+
+Eventually I have come to realise that I sidetracked too much, purs
+uing perfection and comprehensiveness that is not suited for this blog. This entry is neither
+bite-sized nor <abbr title='in the sense of "daily"'>journalish</abbr>.
+
+As such, this ends the entry and I will move on to other ones. And try to stick to the idea of
+_bitesyzed tech journal_
