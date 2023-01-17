@@ -18,6 +18,7 @@ printhelp(){
 	$(tput bold)ACTIONS$(tput init)
 	-e | --edit
 	-n | --name
+	-m | --move
 	-p | --publish
 	-u | --unpublish
 	-h | --help
@@ -37,6 +38,14 @@ while [ ${#} -gt 0 ]; do
 			;;
 		--unpublish|-u)
 			action=unpublish
+			;;
+		--move*|-m*)
+			action=move
+			if [ "x${1##*=}" != "x${1}" ]; then
+				new_date=$(convert_date_string "${1##*=}")
+			else
+				new_date=$(convert_date_string now)
+			fi
 			;;
 		--help|-h)
 			printhelp
@@ -60,6 +69,11 @@ for _dir in '_drafts/' '_posts/'; do
 done
 
 if [ -z "${post_name}" ]; then
+	if [ "x${action}" == 'xmove' ]; then
+		>&2 printf '\033[1;31mERROR:\033[0m tring to move %s post; but no entry exist' ${_date}
+		exit 8
+	fi
+
 	>&2 printf 'creating post for %s\nNAME/SLUG REQUIRED: ' "${_date}"
 	read slug
 
@@ -91,6 +105,10 @@ case "${action:-name}" in
 		else
 			echo "${post_name} has not been published yet"
 		fi
+		;;
+	move)
+		new_post_name=${post_name/$_date/$new_date}
+		mv ${post_dir}${post_name} ${post_dir}${new_post_name}
 		;;
 	*)
 		>&2 cat <<- EOM
