@@ -5,6 +5,24 @@ set -e
 [ -n "${DEBUG}" ] && set -x
 
 convert_date_string(){ if { date '+%F' --date="${1}" 2>/dev/null;};then return 0;else >&2 echo 'invalid date string provided';return 1;fi; }
+printhelp(){
+	cat <<- EOM
+	$(tput bold)SYNPOSIS$(tput init)
+	    ./post [ACTION] [DATE]
+
+	$(tput bold)DATE$(tput init)
+	a valid date string is any string that can be parsed
+	by the -d flag to date(1). if absent, 'today' is
+	the default
+
+	$(tput bold)ACTIONS$(tput init)
+	-e | --edit
+	-n | --name
+	-p | --publish
+	-u | --unpublish
+	-h | --help
+	EOM
+}
 
 while [ ${#} -gt 0 ]; do
 	case "${1}" in
@@ -19,6 +37,10 @@ while [ ${#} -gt 0 ]; do
 			;;
 		--unpublish|-u)
 			action=unpublish
+			;;
+		--help|-h)
+			printhelp
+			exit 0
 			;;
 		*)
 			_date=$(convert_date_string "${1}")
