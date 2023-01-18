@@ -42,7 +42,7 @@ your webserver. I almost always use nginx, so to me that meant saving a certific
 and configuring nginx webservers to use them. This meant specifying the `ssl_certificate` and
 `ssl_certificat_key` directives in the nginx configurations.
 
-### Generating TLS keys
+### Generating the TLS certificate
 I have had to keep referring back to online guides to get this done.
 ```
 openssl req -new -x509 \
