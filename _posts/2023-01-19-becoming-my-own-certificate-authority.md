@@ -64,7 +64,7 @@ system-wide.
 
 I wanted to improve my setup in the following ways
 
-* use ecliptic curve keys; that are supposedly faster and also more secure
+* use elliptic curve keys; that are supposedly faster and also more secure
 
 * be a certificate authority; to avoid trusting new certificates each time
 
@@ -85,7 +85,7 @@ Then I get it signed by an authority so my certificate is proven as trustworthy.
 And there is usually a verification step to show that I do control the domain name
 in the certificate.
 
-### Ecliptic Curve key
+### Elliptic Curve key
 Trudging through the documentation, I did not really fully understand, but I found
 an example in the manpage `openssl-genpkey(1)`.
 
@@ -116,7 +116,7 @@ openssl req -x509 \
 but combined with the `-x509` flag, it generates self-signed certificates. I do not
 need to specify `-new` as I did before because it is implied when used with x509.
 
-So now that I had a satisfactory certificate linked to an ecliptic key, I
+So now that I had a satisfactory certificate linked to an elliptic key, I
 installed it on my devices.
 
 ### Certificate signing request
@@ -126,7 +126,7 @@ that I wanted to have it signed by a certificate authority, I had to generate
 using the same command as self-signed certificates with the `-new` instead of
 the `-x509` flag.
 
-First I generate a new private key - using an ecliptic curve! Then a CSR using
+First I generate a new private key - using an elliptic curve! Then a CSR using
 the key.
 
 ```
