@@ -48,22 +48,22 @@ file100.txt
 file200.txt
 ```
 
+But that's a slow process, so obviously one has to do it
+faster
+
 ## Pad it programmatically
 
 > **NB** These are instructions for zsh and most likely will
 > not work in other shells
 
-But that's a slow process, so obviously one has to do it
-faster
-
 Hence the expanded parameter
-```
+```shell
 ${name/(#b)(<->)/${l:3::0:)match}}
 ```
 that is broken down.
 
 ### substitution
-```
+```shell
 ${name/pattern/replacement}
 ```
 Overall, it is a substituition. `${name}` is the parameter
@@ -89,7 +89,7 @@ pattern only matches one digit. But numbers in filenames are longer.
 
 The pattern `<->` is shorthand to mean any number.
 
-```
+```console
 $ name='May 1968'
 $ echo "${name/<->/XXXX}"
 May XXXX
@@ -114,7 +114,7 @@ with the character 0.
 `(l:3:)` would truncate or pad a parameter as needed to make it three characters long.
 By default, padding is doing using blank spaces, but in `::0` we specify to use zeros.
 
-## patter&#8209;match&#8209;pad&#8209;replace
+## pattern&#8209;match&#8209;pad&#8209;replace
 
 Bringing it all together, we have
 `${name/(#b)(<->)/${(l:3::0:)name}}` in a for-loop
