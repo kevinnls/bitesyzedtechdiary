@@ -84,7 +84,7 @@ The search pattern `(#b)(<->)` has two parts. Let's first look at the
 `<->`.
 
 `<n-m>` is a glob pattern in zsh to indicate a range of numbers&mdash;
-not digit characters&mdash;. This is useful because the more common `[0-9]`
+not digit characters. This is useful because the more common `[0-9]`
 pattern only matches one digit. But numbers in filenames are longer.
 
 The pattern `<->` is shorthand to mean any number.
@@ -112,7 +112,7 @@ The `(l:3::0:)` qualifier to a parameter pads the paramater to 3 characters on t
 with the character 0.
 
 `(l:3:)` would truncate or pad a parameter as needed to make it three characters long.
-By default, padding is doing using blank spaces, but in `::0` we specify to use zeros.
+By default, padding is done using blank spaces, but in `::0` we specify to use zeros.
 
 ## pattern&#8209;match&#8209;pad&#8209;replace
 
