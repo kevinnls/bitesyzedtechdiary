@@ -30,7 +30,7 @@ literature course.
 ## The splitting task
 
 The instructor was going to go over excerpts from course material.
-Some of the material was really long pdf files going, but we only
+Some of the material was really long pdf files. But we only
 needed a few sections. How do we extract out only the parts we need?
 
 We could <abbr title="sign an eternal contract in money">pay
@@ -55,14 +55,14 @@ pdfseparate -f 4 -l 5 "filename.pdf" "filename-p%d.pdf"
 pdfunite "filename-p4.pdf" "filename-p5.pdf" "filename.excerpt.pdf"
 ```
 
-But that is two separate commands for just one file and each
+That is two separate commands for just one file and each
 filename and page count needs to be stated so expressly… how is this more
 efficient?
 
 It isn't. But the command line offers so much opportunity
-for efficiency through automation.
+for efficiency through other features such as loops.
 
-## Automation by looping
+## Loops
 
 I could simply change my command to go over all the pdf files and
 run the commands for each one. By using a variable `${file}`, I
@@ -76,7 +76,7 @@ for file in *.pdf; do
 done
 ```
 
-Additionally, I set the individual pages to be saved to `.page` files
+Additionally, I set the individual pages to be saved to `.page` files
 instead of `.pdf` file. This lets me use the `${file}-p*.page` part
 to indicate a pattern of filenames instead of specifying each file
 that needs to be combined by `pdfunite`; and also won't interfere
@@ -132,6 +132,7 @@ Or to simple take notes in class if you use vim 😎
 
 ![that is just how my notepad looks](/assets/post-img/2023/09/18-001-not_code.png)
 
+{%comment%}
 <!--
 #!/bin/sh
 
@@ -176,3 +177,4 @@ pdfunite ${tmpdir}/*.pdf ../LittératureContemporaines_extraits.pdf
 <!--
 - vim: spell spelllang=en
 -->
+{%endcomment%}
