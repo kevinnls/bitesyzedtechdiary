@@ -130,7 +130,7 @@ situations other than coding&mdash;such as a university literature course.
 Or to simple take notes in class if you use vim 😎
 
 
-![that is just how my notepad looks](/assets/post-img/2023/09/18-001-not_code.png)
+![that is just how my notepad looks](/assets/post-img/2023/09/18-001-not_code.jpg)
 
 {%comment%}
 <!--
